@@ -1,0 +1,12 @@
+<p>editor-component works!</p>
+<ckeditor 
+    [editor]="Editor" 
+    (ngModelChange)="hintText($event)"
+    [ngModel]= "textIn"
+    >
+</ckeditor>
+<app-hintlist 
+    [arrList]="nameHint"   
+    *ngIf="nextcom=='hintlist'"    
+    (getMail)="getEmail($event)">
+</app-hintlist>
